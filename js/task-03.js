@@ -19,3 +19,6 @@ const listItems = images.map(
 
 const menuEl = document.querySelector('.gallery');
 menuEl.insertAdjacentHTML('afterbegin', listItems);
+
+// стили добавил в CSS файл.
+// Написано разметку нельзя менять, за CSS ничего не сказано)

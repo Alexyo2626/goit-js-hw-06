@@ -4,7 +4,7 @@ const correctLength = Number(inputEl.dataset.length);
 inputEl.addEventListener('blur', onBlur);
 
 function onBlur() {
-  if (inputEl.value.length === correctLength) {
+  if (inputEl.value.trim().length === correctLength) {
     inputEl.classList.remove('invalid');
     inputEl.classList.add('valid');
   } else {

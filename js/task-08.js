@@ -9,13 +9,25 @@ function handleSubmit(event) {
     elements: { email, password },
   } = event.currentTarget;
 
-  if (password.value === '' || email.value === '') {
-    alert('Please fill in all the fields!');
+  // проверка на каждое поле (вместе и по отдельности)
+  if (email.value === '' && password.value === '') {
+    alert('Ты ничего не написал!');
+    return;
   }
+  if (email.value === '') {
+    alert('Ты забыл написать почту!');
+    return;
+  }
+  if (password.value === '') {
+    alert('Ты забыл написать свой пароль!');
+    return;
+  }
+
   const formData = {
     [email.name]: email.value,
     [password.name]: password.value,
   };
+
   console.log(formData);
   event.currentTarget.reset();
 }
