@@ -34,3 +34,12 @@ margin: 15px;
 width: auto;
 height: 200px;
 }
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#boxes div {
+  margin: 10px;
+}
